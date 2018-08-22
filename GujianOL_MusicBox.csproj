@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>98a39d5d-01f6-4ed1-912e-64bc2fce0d59</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>GujianOL_MusicBox</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Telerik.WinControls.UI" />
+    <Reference Include="System" />
+    <Reference Include="NLua" />
+    <Reference Include="SharpDX.XAudio2" />
+    <Reference Include="SharpDX.Desktop" />
+    <Reference Include="SharpDX.Direct2D1" />
+    <Reference Include="SharpDX" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark" />
+    <Reference Include="System.Core" />
+    <Reference Include="GujianOL_MusicBox_Resources" />
+    <Reference Include="SharpDX.DXGI" />
+    <Reference Include="Telerik.WinControls" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="GujianOL_MusicBox\MusicCanvasControl.cs" />
+    <Compile Include="GujianOL_MusicBox\MusicCanvasIoEventArgs.cs" />
+    <Compile Include="GujianOL_MusicBox\PropertyPanel.cs" />
+    <Compile Include="GujianOL_MusicBox\GujianOL_MusicBox.cs" />
+    <Compile Include="GujianOL_MusicBox\SendMessageToClient.cs" />
+    <Compile Include="GujianOL_MusicBox\MusicBoxHelpWindow.cs" />
+    <Compile Include="GujianOL_MusicBox\AudioSource.cs" />
+    <Compile Include="GujianOL_MusicBox\Arpeggio.cs" />
+    <Compile Include="GujianOL_MusicBox\IniFile.cs" />
+    <Compile Include="GujianOL_MusicBox\MusicObjectUtility.cs" />
+    <Compile Include="GujianOL_MusicBox\MusicCanvasControlUtility.cs" />
+    <Compile Include="GujianOL_MusicBox\McNotePack.cs" />
+    <Compile Include="GujianOL_MusicBox\McMeasure.cs" />
+    <Compile Include="GujianOL_MusicBox\McRegularTrack.cs" />
+    <Compile Include="GujianOL_MusicBox\McNotation.cs" />
+    <Compile Include="GujianOL_MusicBox\McPitch.cs" />
+    <Compile Include="GujianOL_MusicBox\VolumeCurve.cs" />
+    <Compile Include="GujianOL_MusicBox\McHoverInfo.cs" />
+    <Compile Include="GujianOL_MusicBox\McUtility.cs" />
+    <Compile Include="GujianOL_MusicBox\Program.cs" />
+    <Compile Include="GujianOL_MusicBox\Properties\Resources.cs" />
+    <Compile Include="GujianOL_MusicBox\Properties\Settings.cs" />
+    <EmbeddedResource Include="GujianOL_MusicBox.PropertyPanel.resources" />
+    <EmbeddedResource Include="GujianOL_MusicBox.GujianOL_MusicBox.resources" />
+    <EmbeddedResource Include="GujianOL_MusicBox.MusicBoxHelpWindow.resources" />
+    <EmbeddedResource Include="GujianOL_MusicBox.Properties.Resources.resources" />
+    <EmbeddedResource Include="GujianOL_MusicBox.Images.ClefL2G.png" />
+    <EmbeddedResource Include="GujianOL_MusicBox.Images.ClefL4F.png" />
+    <EmbeddedResource Include="GujianOL_MusicBox.Images.Logo.png" />
+    <EmbeddedResource Include="GujianOL_MusicBox.Images.AboutLogo.png" />
+    <EmbeddedResource Include="GujianOL_MusicBox.exe.licenses" />
+  </ItemGroup>
+</Project>
